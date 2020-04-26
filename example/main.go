@@ -7,17 +7,17 @@ import (
 )
 
 func main() {
-	number1, err := bigNumber.New(bigNumber.DECIMAL, "123412341234")
+	number1, err := bigNumber.New(bigNumber.DECIMAL, "1234123412340835091826498217340918273409128734912873491283476746754674")
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	fmt.Println(number1.BinaryStr(), number1.DecimalStr())
+	fmt.Println(number1.BinaryStr())
 
-	number2, err := bigNumber.New(bigNumber.BINARY, "100011000100110110110111111100110100001001101001110")
+	number2, err := bigNumber.New(bigNumber.BINARY, "10110111000110101100111101010011111001111011111011101010100010110010000000100111100011011100101010110110000111000010010101111110110000011001111101111000010110101000011101001110010000001010010101100011100111100001100101101001110010")
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	fmt.Println(number2.BinaryStr(), number2.DecimalStr())
+	fmt.Println(number2.DecimalStr())
 }
