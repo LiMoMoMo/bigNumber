@@ -231,6 +231,8 @@ func New(t InitType, input string) (*BigNumber, error) {
 		}
 		b.binaryData = []byte(input)
 		b.toDecimal()
+	default:
+		return nil, errors.New("unsupported initType")
 	}
 	return &b, nil
 }
